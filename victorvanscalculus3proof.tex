@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=.5in,left=.5in]{geometry}
+\usepackage{amsthm}
+\renewcommand{\qedsymbol}{QED}
+
+\begin{document}
+
+\noindent The triple integral of a function \( f(x, y, z) \) over a box \( B \) is written as:
+\[
+\iiint_B f(x, y, z) \, dV.
+\]
+
+\begin{proof}
+
+\noindent For simplicity, we can start with a simple double integral. This principle can be applied to any arbitrary n-number of iterated integrals.
+\[
+\iint_Rf(x,y) \, dA.
+\]
+
+\noindent For any iterated integral of some function $f(x,y)$ in any Euclidean coordinate system (e.g. Cartesian, polar, and cylindrical), such that $f(x,y)$ can be expressed as the product of two independent functions $g(x)$ and $h(y)$, and that the bounds of integration are constants:
+
+\[
+\int_{c}^{d} \int_{a}^{b} f(x, y) \, dA = \int_{c}^{d} \int_{a}^{b} g(x)h(y) \,dxdy
+\]
+
+\[
+\{(a, b, c, d) \in \mathbb{R}\}
+\]
+
+\[
+h(y) \text{ is a constant when you integrate with respect to } x.
+\]
+
+\[
+g(x) \text{ is a constant when you integrate with respect to } y.
+\]
+
+\noindent We can represent this as the product of two definite integrals of functions that are independent of each other:
+
+\[
+\int_{a}^{b}g(x) \,dx \cdot \int_{c}^{d}h(y) \,dy
+\]
+
+\noindent If this claim is true, it must also apply to partial derivatives due to the Fundamental Theorem of Calculus.\\
+
+\noindent Suppose some function $f(x, y) = x^2 y^3$.
+
+\[
+f(x, y) = g(x) \cdot h(y); \quad g(x) = x^2, \quad h(y) = y^3
+\]
+
+\[
+\frac{\partial^{2} f}{\partial x \partial y} = \frac{\partial^{2}f}{\partial y \partial x} = 6xy^{2}
+\]
+
+\[\frac{\partial g}{\partial x} = 2x\]
+\[\frac{\partial h}{\partial y} = 3y^{2}\]
+\[\frac{\partial g}{\partial x} \cdot \frac{\partial h}{\partial y} = 6xy^{2}\]
+Thus:
+
+\[
+\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial g}{\partial x} \cdot \frac{\partial h}{\partial y} = \frac{dg}{dx} \cdot \frac{dh}{dy}
+\]
+
+\noindent Therefore, if and only if $f_i(x_i)$ is independent from $f_{i+1}(x_{i+1})$
+\[
+\prod_{i=1}^n \int_{a_i}^{b_i} f_i(x_i) \, dx_i = \int_{a_1}^{b_1} f_1(x_1) \, dx_1 \cdot \int_{a_2}^{b_2} f_2(x_2) \, dx_2 \cdots \int_{a_n}^{b_n} f_n(x_n) \, dx_n
+\]
+
+\[
+\{(a_i, b_i) \in \mathbb{R}\mid i \in \mathbb{N} \}
+\]
+
+\noindent The proof is trivial.
+
+\end{proof}
+
+\end{document}
