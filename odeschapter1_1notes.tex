@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=.5in,left=.5in]{geometry} 
+\usepackage{amsthm}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Push content to vertical center
+    {\Large Ordinary Differential Equations} \\[0.5cm]
+    {\Large Chapter 1.1 Notes: Background} \\[0.5cm]
+    {\large Victor C. Van} \\[1cm]
+    {\today}
+    \vspace*{\fill} % Push content to vertical center
+\end{titlepage}
+
+\textbf{Differential Equation}: equation that contains the derivative of an unknown function.\\
+
+\textit{Example}: In the case of free fall, an object is released from a certain height above the ground and falls under the force of gravity. Newton's second law, which states that an object's mass times its acceleration equals the total force acting on it, can be applies to the falling object. This leads to the equation:\\
+\[
+m\frac{d^{2}h}{dt^{2}} =-mg
+\]
+
+where m is the mass of the object, h, is the height above the ground, $\frac{d^{2}h}{dt^{2}}$ is its acceleration, and $-mg$ is the force due to gravity. This is a differential equation containing the second derivative of the unknown height $h$ as a function of time.
+
+Whenever a mathematical model involves the rate of change of one variable with respect to another, a differential equation is apt to appear.\\
+
+If an equation involves the derivative of one variable with respect to another, then the former is called a \textbf{dependent variable} and the latter an \textbf{independent variable}. Thus the equation (6):
+
+\[
+\frac{d^{2}x}{dt^{2}} + a \frac{dx}{dt} + kt = 0, \tag{5}
+\]
+
+t is the independent variable and x is the dependent variable. We refer to a and k as coefficients in equation (5). In the equation
+
+\[
+\frac{\partial u}{\partial x} - \frac{\partial u}{\partial y} = x -2y \tag{6}
+\]
+
+A differential equation involving only ordinary derivatives with respect to a single independent variable is called an \textbf{ordinary differential equation}. A differential equation involving partial derivatives with respect to more than one independent variable is called a \textbf{partial differential equation}.\\
+
+The \textit{order} of a differential equation is the order of the highest-order derivatives present in the equation.\\
+
+It will be useful to classify ordinary differential equations as being either linear or nonlinear.\\
+
+The equation of he lines $ax+by=c$ and planes $ ax+by+cz=d$ have the feature that the variables appear in \textit{additive combinations of their first power only.} By analogy, a \textbf{linear differential equation} is one in which the dependent variable y and its derivatives appear in additive combinations of their first powers.
+
+More precisely, a differential equation is linear if it has the format:
+\[
+a_n(x) \frac{d^{n}y}{dx^{n}} + a_{n-1} \frac{d^{n-1}y}{dx^{n-1}} + \cdots + a_{1}(x) \frac{dy}{dx}+a_{0}(x)y = F(x).
+\]
+
+If an ordinary differential equation is not linear, then we call it \textbf{nonlinear}. For example:
+\[
+\frac{d^{2}y}{dx^{2}} + y^{3}=x^{3}
+\]
+is linear (despite the $x^{3}$ term). The equation
+\[
+\frac{d^{2}y}{dx^{2}} -y \frac{dy}{dx}=cos(x)
+\]
+is nonlinear because of the $y \frac{dy}{dx}$ term.
+
+\newpage
+
+\end{document}
