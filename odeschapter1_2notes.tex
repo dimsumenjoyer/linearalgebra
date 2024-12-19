@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=.5in,left=.5in]{geometry} 
+\usepackage{amsthm}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Push content to vertical center
+    {\Large Ordinary Differential Equations} \\[0.5cm]
+    {\Large Chapter 1.2 Notes: Solutions \& Inital Value Problems} \\[0.5cm]
+    {\large Victor C. Van} \\[1cm]
+    {\today}
+    \vspace*{\fill} % Push content to vertical center
+\end{titlepage}
+
+An \textit{n}th order ordinary differential equation is an equality involving the independent variable x,  the dependent variable y, and the first \textit{n} derivative of y.
+Examples are:
+
+\[
+    \text{Second Order}: x^{2} + \frac{d^{2}y}{dx^{2}} + y = x^{3}
+\]
+
+\[
+    \text{Second Order}: \sqrt{1- (\frac{d^{2}y}{dx^{2}})^{2}} - y = 0
+\]
+
+\[
+    \text{Fourth Order}: \frac{d^{4}y}{dx^{4}} = xy
+\]
+
+Thus a general form for an nth order equation would be:
+
+\[
+    F(x,y, \frac{dy}{dx}, \cdots, \frac{d^{n}y}{dx^{n}} = 0) \tag{1}
+\]
+
+where \textit{F} is a function of the independent variable x, the dependent variable y, and the derivative of y up to order n; that is $x,y, \cdots, \frac{d^{n-1}y}{dx^{n-1}}$.
+We assume thst the equation holds for all x in an interval \textit{I} (which masy or may not include its endpoints:
+$a \leq x \leq b, a < x \leq b, etc).$ In many cases, we can isolate the highest-order term $\frac{d^{n}y}{dx^{n}}$, and write (1) as:
+
+\[
+    \frac{d^{n}y}{dx^{n}} = f(x,y, \frac{dy}{dx}, \cdots, \frac{d^{n}y}{dx^{n}}) \tag{2}
+\]
+
+which is often preferable to (1) for theoretical and computational purposes.
+
+
+\fbox{
+\begin{minipage}{0.95\linewidth} % Adjust the width as needed
+\textbf{EXPLICIT SOLUTION}\\
+\textbf{Definition 1.} A function $\phi(x)$ that when substituted for $y$ in equation (1) [or (2)] satisfies the equation for all $x$ in the interval \textit{I} is called an \textbf{explicit solution} to the equation on \textit{I}.
+\end{minipage}}
+
+\textbf{EXAMPLE 1:} Show that $\phi(x) = x^{2} - x^{-1}$ is an explicit solution today
+
+\[
+    \frac{d^{2}y}{dx^{2}} - \frac{2}{x^{2}}y = 0.
+\]
+
+\textbf{Solution}: The functions $\phi(x) = x^{2} - x^{-1}, \phi'(x) = 2x + x^{-2}$, and $\phi''(x) = 2 - 2x^{-3}$ are defined for all
+$x \not = 0$. Substitution of $\phi(x)$ for $y$ in the equation (3) gives:
+
+\[
+    (2-2x^{-3})- \frac{2}{x^{2}}(x^{2}-x^{-1}) =  (2-2x^{-3}) - (2-2x^{-3}) = 0.
+\]
+
+\textbf{EXAMPLE 2:} Show that for \textit{any} choice of the constants $c_1$ and $c_2$, the function
+
+\[
+    \phi(x) = c_{1}e^{-1} + c_2e^{2x}
+\]
+
+is an explicit solution to
+
+\[
+    y'' -  y' -2y = 0. \tag{4}
+\]
+
+
+\newpage
+\[
+    a \land b, c \lor d, \exists
+\]
+\end{document}
