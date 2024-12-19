@@ -4,55 +4,62 @@
 \usepackage[margin=.5in,left=.5in]{geometry}
 \usepackage{amsthm}
 \renewcommand{\qedsymbol}{QED}
+\setlength{\parindent}{0pt}
 
 \begin{document}
 
-\noindent The triple integral of a function \( f(x, y, z) \) over a box \( B \) is written as:
-\[
-\iiint_B f(x, y, z) \, dV.
-\]
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Push content to vertical center
+    {\Large Calculus 3 Proof} \\[0.5cm]
+    {\Large (jokingly called "The Victor Theorem", according to a classmate)} \\[0.5cm]
+    {\Large Written for: Professor Habib Maagoul} \\[0.5cm]
+    {\large Victor C. Van} \\[1cm]
+    {\large November 27, 2024}
+    \vspace*{\fill} % Push content to vertical center
+\end{titlepage}
 
 \begin{proof}
 
-\noindent For simplicity, we can start with a simple double integral. This principle can be applied to any arbitrary n-number of iterated integrals.
+For simplicity, we can start with a simple double integral. This principle can be applied to any arbitrary n-number of iterated integrals.
 \[
-\iint_Rf(x,y) \, dA.
+    \iint_Rf(x,y) \, dA.
 \]
 
-\noindent For any iterated integral of some function $f(x,y)$ in any Euclidean coordinate system (e.g. Cartesian, polar, and cylindrical), such that $f(x,y)$ can be expressed as the product of two independent functions $g(x)$ and $h(y)$, and that the bounds of integration are constants:
+For any iterated integral of some function $f(x,y)$ in any Euclidean coordinate system (e.g. Cartesian, polar, and cylindrical), such that $f(x,y)$ can be expressed as the product of two independent functions $g(x)$ and $h(y)$, and that the bounds of integration are constants:
 
 \[
-\int_{c}^{d} \int_{a}^{b} f(x, y) \, dA = \int_{c}^{d} \int_{a}^{b} g(x)h(y) \,dxdy
-\]
-
-\[
-\{(a, b, c, d) \in \mathbb{R}\}
+    \int_{c}^{d} \int_{a}^{b} f(x, y) \, dA = \int_{c}^{d} \int_{a}^{b} g(x)h(y) \,dxdy
 \]
 
 \[
-h(y) \text{ is a constant when you integrate with respect to } x.
+    \{(a, b, c, d) \in \mathbb{R}\}
 \]
 
 \[
-g(x) \text{ is a constant when you integrate with respect to } y.
+    h(y) \text{ is a constant when you integrate with respect to } x.
 \]
 
-\noindent We can represent this as the product of two definite integrals of functions that are independent of each other:
+\[
+    g(x) \text{ is a constant when you integrate with respect to } y.
+\]
+
+We can represent this as the product of two definite integrals of functions that are independent of each other:
 
 \[
 \int_{a}^{b}g(x) \,dx \cdot \int_{c}^{d}h(y) \,dy
 \]
 
-\noindent If this claim is true, it must also apply to partial derivatives due to the Fundamental Theorem of Calculus.\\
+If this claim is true, it must also apply to partial derivatives due to the Fundamental Theorem of Calculus.\\
 
-\noindent Suppose some function $f(x, y) = x^2 y^3$.
+Suppose some function $f(x, y) = x^2 y^3$.
 
 \[
-f(x, y) = g(x) \cdot h(y); \quad g(x) = x^2, \quad h(y) = y^3
+    f(x, y) = g(x) \cdot h(y); \quad g(x) = x^2, \quad h(y) = y^3
 \]
 
 \[
-\frac{\partial^{2} f}{\partial x \partial y} = \frac{\partial^{2}f}{\partial y \partial x} = 6xy^{2}
+    \frac{\partial^{2} f}{\partial x \partial y} = \frac{\partial^{2}f}{\partial y \partial x} = 6xy^{2}
 \]
 
 \[\frac{\partial g}{\partial x} = 2x\]
@@ -61,20 +68,67 @@ f(x, y) = g(x) \cdot h(y); \quad g(x) = x^2, \quad h(y) = y^3
 Thus:
 
 \[
-\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial g}{\partial x} \cdot \frac{\partial h}{\partial y} = \frac{dg}{dx} \cdot \frac{dh}{dy}
+    \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial g}{\partial x} \cdot \frac{\partial h}{\partial y} = \frac{dg}{dx} \cdot \frac{dh}{dy}
 \]
 
-\noindent Therefore, if and only if $f_i(x_i)$ is independent from $f_{i+1}(x_{i+1})$
+Therefore, if and only if $f_i(x_i)$ is independent from $f_{i+1}(x_{i+1})$
 \[
 \prod_{i=1}^n \int_{a_i}^{b_i} f_i(x_i) \, dx_i = \int_{a_1}^{b_1} f_1(x_1) \, dx_1 \cdot \int_{a_2}^{b_2} f_2(x_2) \, dx_2 \cdots \int_{a_n}^{b_n} f_n(x_n) \, dx_n
 \]
 
 \[
-\{(a_i, b_i) \in \mathbb{R}\mid i \in \mathbb{N} \}
+    \{(a_i, b_i) \in \mathbb{R}\mid i \in \mathbb{N} \}
 \]
 
-\noindent The proof is trivial.
+The proof is trivial.
 
 \end{proof}
+
+\newpage
+
+\textbf{Fubini's Theorem:}
+
+The triple integral of a continious function \( f(x, y, z) \) over a box \( B \), where $a \leq x \leq b$, $c \leq y \leq d,$ and $e \leq z \leq f$ to the integral:
+\[
+    \iiint_B f(x, y, z) \, dV = \int_{a}^{b} \int_{c}^{d} \int_{e}^{f}f(x,y,z)dzdydx
+\]
+
+Below is in-class example that this proof was created for, and my work. Professor Maagoul told me that my method was mathematically incorrect, and that if I used this method of integration on the next exam then he'd take points off even if I go the final anwswer correct unless I found him a proof. Since I couldn't find a proof that sufficiently backed my claim online, this was motiviation for writing the proof myself. \\
+Take note about how my proof is basically just an extension of \textit{Fubini's Theorem}.\\
+
+\textbf{Evaluate $\iiint_B xyz^{2} \, dV$ where $ B = \{(x,y,z) \mid  0 \leq x \leq 1, -1 \leq y \leq 2, 0 \leq z \leq 3\}$}
+
+\[
+    \int_{0}^{1} \int_{-1}^{2} \int_{0}^{3}(xyz^{2}) \, dzdydx
+\]
+
+\[
+    = \int_{0}^{1}x \, dx \cdot \int_{-1}^{2}y \, dy \cdot \int_{0}^{3}z^{2} \, dz
+\]
+
+\[
+    = \frac{1}{2}[x^{2}]_{0}^{1} \cdot \frac{1}{2}[y^{2}]_{-1}^{2} \cdot \frac{1}{3}[z^{3}]_{0}^{3}
+\]
+
+\[
+    = \frac{1}{12}[x^{2}]_{0}^{1} \cdot [y^{2}]_{-1}^{2} \cdot [z^{3}]_{0}^{3}
+\]
+
+\[
+    \frac{1}{12}[x^{2}]_{0}^{1} \cdot [y^{2}]_{-1}^{2} \cdot [z^{3}]_{0}^{3}
+\]
+
+\[
+    = \frac{1}{12}((2)^{2}-(-1)^{2})3^{3}
+\]
+
+\[
+    = \frac{1}{12}(4-1)3^{3}
+\]
+
+
+\[
+    = \frac{27}{4}
+\] 
 
 \end{document}
