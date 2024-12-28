@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=.5in,left=.5in]{geometry} 
+\usepackage{amsthm}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill} % Push content to vertical center
+    {\Large An Introduction to Mechanics} \\[0.5cm]
+    {\Large by Daniel Klepper \& Robert Kolenkow} \\[0.5cm]
+    {\large Victor C. Van} \\[1cm]
+    {\large December 27, 2024}
+    \vspace*{\fill} % Push content to vertical center
+\end{titlepage}
+
+\newpage
+
+\begin{center}
+    \item \section*{Chapter 1: Vectors \& Kinematics}
+\end{center}
+
+\begin{center}
+    \item \subsection*{Chapter 1.1: Introduction}
+\end{center}
+
+Mechanics is at the heart of physics; its concepts are essential for understanding the world around us and phenomena on scales from atomic to cosmic.
+Concepts such as momentum, angular momentum, and energy  play roles in practically every part of physics.
+The goal of this bookis to help you acquire a deep understanding of the principles off mechanics.\\\\
+
+The reason we start by discussing vectors and kinematics rather than plunging into dynamics is that we want to use
+these tools freely in discussing physical principles. Rather than interrupt the flow of discussion later,
+we are taking the timne now to ensure they are on hand when requested.
+
+\begin{center}
+    \item \subsection*{Chapter 1.2: Vectors}
+\end{center}
+
+Our principle motivation for inroducting vectors is to simplify the form of equations.
+However, as we shall see in chapter 14, vectors have a much deeper significance. Vectors are closely related to the
+fundamental ideas of symmetry and their use can lead to valuable insights into the possible forms of unknown laws. 
+
+\begin{center}
+    \item \subsubsection*{Chapter 1.4.1: Dot Product} 
+\end{center}
+
+\[
+    \vec{A} \cdot \vec{B} \equiv |\vec{A}||\vec{B}|cos(\theta)
+\]
+
+\textbf{The Law of Cosines}
+The law of cosines relates the lengths of three sides of a triangle to the cosine of one of its angles.
+Following the notation of the drawing, the law of cosines insights
+
+\[
+    C^{2} = A^{2} + B^{2} - 2ABcos{\phi}
+\]
+
+The law can be proved by a variety of trigonmetric or geometric constructions, but none is so simple and elegent
+as the vector proof, which merely involves squaring the sum of the two vectors.
+
+\[
+    \vec(C) = \vec{A} + \vec{B}
+\]
+
+\[
+    \vec{C} \cdot \vec{C} = (\vec{A} + \vec{B}) \cdot (\vec{A} + \vec{B}) = \vec{A} \cdot \vec{A} + \vec{B} \cdot \vec{B} + 2(\vec{A} \cdot \vec{B}) 
+\]
+
+\[
+    |\vec{C}|^{2} = |\vec{A}|^{2} + |\vec{B}|^{2} + 2|\vec{A}||\vec{B}|cos(\theta)
+\]
+
+Recognizing that $cos(\phi)$ = -$cos(\theta)$ completes the proof.
+
+\newpage
+
+\begin{center}
+    \item \subsubsection*{Chapter 1.4.2: Cross Product} 
+\end{center}
+
+\[
+    \vec{C} = \vec{A} \times \vec{B} = |\vec{A}||\vec{B}|sin(\theta)
+\]
+
+\[
+    \vec{B} \times \vec{A} = -\vec{A} \times \vec{B}
+\]
+
+\end{document}
