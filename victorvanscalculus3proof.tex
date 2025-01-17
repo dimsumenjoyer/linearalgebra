@@ -26,14 +26,14 @@ For simplicity, we can start with a basic double integral. This principle can be
     \iint_Rf(x,y) \, dA.
 \]
 
-For any iterated integral of some function $f(x,y)$ in any Euclidean coordinate system (e.g. Cartesian, polar, and cylindrical), such that $f(x,y)$ can be expressed as the product of two independent functions $g(x)$ and $h(y)$, and that the bounds of integration are constants:
+For any iterated integral of some function $f(x,y)$ in any Euclidean coordinate system (e.g. Cartesian, polar, and cylindrical), such that $f(x,y)$ can be expressed as the product of two independent functions $g(x)$ and $h(y)$, and that the bounds of integration are constants or infinities:
 
 \[
     \int_{c}^{d} \int_{a}^{b} f(x, y) \, dA = \int_{c}^{d} \int_{a}^{b} g(x)h(y) \,dxdy
 \]
 
 \[
-    \{(a, b, c, d) \in \mathbb{R}\}
+    \{(a, b, c, d) \in \mathbb{R} \mid - \infty \le (a, b, c, d) \le \infty \}
 \]
 
 \[
@@ -77,7 +77,7 @@ Therefore, if and only if $f_i(x_i)$ is independent from $f_{i+1}(x_{i+1})$
 \]
 
 \[
-    \{(a_i, b_i) \in \mathbb{R}\mid i \in \mathbb{N} \}
+    \{(a, b, c, d) \in \mathbb{R} \mid - \infty \le (a, b, c, d) \le \infty \ \mid i \in \mathbb{N}\}
 \]
 
 The proof is trivial.
@@ -93,7 +93,7 @@ The triple integral of a continious function \( f(x, y, z) \) over a box \( B \)
     \iiint_B f(x, y, z) \, dV = \int_{a}^{b} \int_{c}^{d} \int_{e}^{f}f(x,y,z)dzdydx
 \]
 
-Below is in-class example that this proof was created for, and my work. Professor Maagoul told me that my method was mathematically incorrect, and that if I used this method of integration on the next exam then he'd take points off even if I got the final anwswer correct unless I found him a proof. Since I couldn't find a proof that sufficiently backed my claim online, this was motiviation for writing the proof myself. \\\\
+Below is in-class example that this proof was created for, and my work. It was debated if this method of iterated integration was correct mathematically correct.
 Take note about how my proof is basically just a special case of \textit{Fubini's Theorem} when  $f_1(x_1)$, $f_{2}(x_{2})$, and $f_{3}(x_{3})$ are all independent of each other.\\
 
 \textbf{Evaluate $\iiint_B xyz^{2} \, dV$ where $ B = \{(x,y,z) \mid  0 \leq x \leq 1, -1 \leq y \leq 2, 0 \leq z \leq 3\}$}
